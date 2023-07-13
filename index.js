@@ -21,12 +21,12 @@ const server = http.createServer((req, res) => {
       res.statusCode = 404; 
       break;
   }
-  
+
   fs.readFile(filePath, (err, content) => {
     if (err) {
       console.error(err);
       res.statusCode = 500;
-      res.end('Internal Server Error');alsdkfjhalsdkfjhalsdkfjpppppp
+      res.end('Internal Server Error');
     } else {
       res.setHeader('Content-Type', 'text/html');
       res.end(content);
